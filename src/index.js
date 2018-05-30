@@ -28,6 +28,6 @@ app.router(require('./router').default);
 // 5. Start
 app.start('#root');
 
-console.log(process.env.NODE_ENV);
+console.log(process.env.REACT_APP_ENV);
 
 export default app._store; // eslint-disable-line

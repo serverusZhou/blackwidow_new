@@ -6,8 +6,10 @@
   "scripts": {
     "precommit": "npm run lint-staged",
     "start": "cross-env ESLINT=none roadhog dev",
+    "start:qa": "set \"REACT_APP_ENV=qa\" && npm start",
     "start:no-proxy": "cross-env NO_PROXY=true ESLINT=none roadhog dev",
     "build": "cross-env ESLINT=none roadhog build",
+    "build:QA": "set \"REACT_APP_ENV=qa\" && npm run build",
     "site": "roadhog-api-doc static && gh-pages -d dist",
     "analyze": "cross-env ANALYZE=true roadhog build",
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",

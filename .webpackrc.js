@@ -1,5 +1,4 @@
 const path = require('path');
-
 export default {
   entry: 'src/index.js',
   extraBabelPlugins: [['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }]],
@@ -7,6 +6,9 @@ export default {
     development: {
       extraBabelPlugins: ['dva-hmr'],
     },
+  },
+  define: {
+    "process.env.REACT_APP_ENV": process.env.REACT_APP_ENV,
   },
   alias: {
     components: path.resolve(__dirname, 'src/components/'),
